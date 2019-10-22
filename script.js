@@ -1,9 +1,26 @@
-let something = 5;
+let money = prompt("Какой Ваш бюджет на месяц?", 0);
 
-console.log(something);
+console.log(money);
 
-/* alert("Привет мир!"); */
+let time = prompt("Введите дату в формате YYYY-MM-DD", "22.10.2019");
 
-let answer = prompt("Вам есть 18?", "Нет");
+console.log(time);
 
-console.log(answer);
+let appData = {
+  budget: money,
+  timeData: time,
+  expenses: {},
+  optionalExpenses: {},
+  income: [],
+  savings: false,
+};
+
+let a1 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+a2 = prompt("Во сколько обойдется?", ''),
+a3 = prompt("Введите обязательную статью расходов в этом месяце", ''),
+a4 = prompt("Во сколько обойдется?", '');
+
+appData.expenses.a1 = a2;
+appData.expenses.a3 = a4;
+
+alert(appData.budget/30);
